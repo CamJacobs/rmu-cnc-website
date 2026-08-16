@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RMU Catholic Newman Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/eventspage.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="icon" type="image/png" href="icons/cnc-logo.png">
+  </head>
+
+  <body>
+    <div class="bg-slideshow">
+      <div class="bg-slideshow-slide active" style="background-image: url('icons/events-page-photo-11.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-1.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-2.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-12.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-3.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-4.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-5.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-6.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-7.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-8.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-9.png')"></div>
+      <div class="bg-slideshow-slide" style="background-image: url('icons/events-page-photo-10.png')"></div>
+    </div>
+
+    <script>
+      (function() {
+        const slides = document.querySelectorAll('.bg-slideshow-slide');
+        let current = 0;
+        setInterval(() => {
+          slides[current].classList.remove('active');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('active');
+        }, 5000);
+      })();
+    </script>
+
+    <div class="header">
+      <div class="left-section">
+        <button class="hamburger-menu-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="off-screen-menu">
+          <ul>
+            <li class="menu-title pages-title">Pages</li>
+            <li class="page-link">
+              <img class="home-icon" src="icons/home.svg">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="page-link">
+              <img class="events-icon" src="icons/events.svg">
+              <a href="eventspage.html">Events</a>
+            </li>
+            <li class="page-link">
+              <img class="contact-icon" src="icons/contact.svg">
+              <a href="contactpage.html">Contact</a>
+            </li>
+            <li class="page-link">
+              <img class="sign-up-icon" src="icons/sign-up.svg">
+              <a href="sign-up-page.html">Sign Up</a>
+            </li>
+
+            <li class="menu-title">Resources</li>
+            <li>
+              <img class="eucharist-logo" src="icons/eucharist.jpg">
+              <a href="https://www.miracolieucaristici.org/en/liste/list.html" target="_blank">Eucharistic Miracles</a>
+            </li>
+            <li>
+              <img class="diocese-logo" src="icons/dop.png">
+              <a href="https://diopitt.org/" target="_blank">Diocese of Pittsburgh</a>
+            </li>
+            <li>
+              <img class="vatican-news-logo" src="icons/vaticannewslogo.jpg">
+              <a href="https://www.vaticannews.va/en.html" target="_blank">Vatican News</a>
+            </li>
+            <li>
+              <img class="catholic-answers-logo" src="icons/catholicanswerslogo.webp">
+              <a href="https://www.catholic.com/" target="_blank">Catholic Answers</a>
+            </li>
+            <li>
+              <img class="bible-logo" src="icons/biblegate.png">
+              <a href="https://www.biblegateway.com/" target="_blank">Online Bible</a>
+            </li>
+            <li>
+              <img class="catechism-logo" src="icons/Catechism of the Catholic Church, Revised.jpg">
+              <a href="https://usccb.cld.bz/Catechism-of-the-Catholic-Church2" target="_blank">Online Catechism</a>
+            </li>
+            <li>
+              <img class="ascension-logo" src="icons/ascension-presents-logo.jpeg">
+              <a href="https://www.youtube.com/watch?v=RS8NrJ0Y5O8" target="_blank">How To Understand Mass</a>
+            </li>
+            <li>
+              <img class="rosary-logo" src="icons/rosaryimage.jpg">
+              <a href="https://www.usccb.org/how-to-pray-the-rosary" target="_blank">How to Pray the Rosary</a>
+            </li>
+            <li>
+              <img class="how-logo" src="icons/howlogo.jpg">
+              <a href="https://www.youtube.com/watch?v=P1HC0Vz67yo" target="_blank">How to Become Catholic</a>
+            </li>
+          </ul>
+        </nav>
+
+        <script>
+          const hamburger = document.querySelector('.hamburger-menu-button');
+          const menu = document.querySelector('.off-screen-menu');
+          hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+          });
+        </script>
+
+        <img class="colonial-catholics-image" src="icons/cnc-logo.png">
+
+        <div class="search-section">
+          <input class="search-bar" type="text" placeholder="Search">
+          <button class="search-button">
+            <img class="search-icon" src="icons/search.svg">
+          </button>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="nav-buttons">
+          <button class="home-button">
+            <img class="home-icon" src="icons/home.svg">
+            <div class="home"><a href="index.html">Home</a></div>
+          </button>
+          <button class="events-button">
+            <img class="events-icon" src="icons/events.svg">
+            <div class="events"><a href="eventspage.html">Events</a></div>
+          </button>
+          <button class="contact-button">
+            <img class="contact-icon" src="icons/contact.svg">
+            <div class="contact"><a href="contactpage.html">Contact</a></div>
+          </button>
+          <button class="sign-up-button">
+            <img class="sign-up-icon" src="icons/sign-up.svg">
+            <div class="sign-up"><a href="sign-up-page.html">Sign Up</a></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.querySelector(".search-bar");
+        const searchButton = document.querySelector(".search-button");
+        const menu = document.querySelector(".off-screen-menu");
+
+        if (!searchInput || !searchButton) return;
+
+        const dropdown = document.createElement("div");
+        dropdown.className = "search-dropdown";
+        dropdown.style.display = "none";
+        document.querySelector('.search-section').appendChild(dropdown);
+
+        const pages = {
+          "mass": { label: "Mass", url: "eventspage.html", newTab: false },
+          "rosary": { label: "Rosary", url: "eventspage.html", newTab: false },
+          "ethan zeledon": { label: "Ethan Zeledon", url: "contactpage.html", newTab: false },
+          "men's group": { label: "Men's Group", url: "eventspage.html", newTab: false },
+          "women's group": { label: "Women's Group", url: "eventspage.html", newTab: false },
+          "bible study": { label: "Bible Study", url: "eventspage.html", newTab: false },
+          "confession": { label: "Confession", url: "eventspage.html", newTab: false },
+          "about": { label: "About", url: "index.html#interior-section", newTab: false },
+          "history": { label: "History", url: "index.html#newman-section", newTab: false },
+          "resources": { label: "Resources", action: "menu" },
+          "facebook": { label: "Facebook Page", url: "https://www.facebook.com/people/RMU-Colonial-Catholic-Ministry/100064644761324/?ref=embed_page#", newTab: true },
+          "x": { label: "X Page", url: "https://x.com/rmuccm", newTab: true },
+          "instagram": { label: "Instagram Page", url: "https://www.instagram.com/colonialcatholic/?hl=en", newTab: true }
+        };
+
+        function navigate(result) {
+          dropdown.style.display = "none";
+          searchInput.value = "";
+          if (result.action === "menu") {
+  if (menu) {
+    menu.classList.add("active");
+    hamburger.classList.add("active");
+  }
+  return;
+}
+          if (result.newTab) {
+            window.open(result.url, "_blank", "noopener,noreferrer");
+          } else {
+            window.location.href = result.url;
+          }
+        }
+
+        function handleSearch() {
+          const query = searchInput.value.trim().toLowerCase();
+          if (!query) return;
+          if (pages[query]) { navigate(pages[query]); return; }
+          for (const key in pages) {
+            if (key.includes(query) || query.includes(key)) {
+              navigate(pages[key]);
+              return;
+            }
+          }
+          alert("No results found.");
+        }
+
+        function renderDropdown(results) {
+          dropdown.innerHTML = "";
+          results.forEach(result => {
+            const item = document.createElement("div");
+            item.textContent = result.label;
+            item.addEventListener("click", () => navigate(result));
+            dropdown.appendChild(item);
+          });
+          dropdown.style.display = results.length ? "block" : "none";
+        }
+
+        function updateDropdown() {
+          const query = searchInput.value.trim().toLowerCase();
+          let results = [];
+          if (!query) {
+            results = Object.values(pages);
+            renderDropdown(results);
+            return;
+          }
+          if (pages[query]) { results.push(pages[query]); }
+          for (const key in pages) {
+            if (key.includes(query) && (!pages[query] || key !== query)) {
+              results.push(pages[key]);
+            }
+          }
+          renderDropdown(results);
+        }
+
+        searchInput.addEventListener("focus", updateDropdown);
+        searchInput.addEventListener("input", updateDropdown);
+        searchButton.addEventListener("click", handleSearch);
+        searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") handleSearch(); });
+        document.addEventListener("click", (e) => {
+          if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <!-- EVENTS CALENDAR -->
+    <main class="events-page">
+      <div class="events-heading-wrap">
+        <span class="events-eyebrow">RMU Catholic Newman Club</span>
+        <h1 class="events-title">Events</h1>
+        <div class="events-rule"></div>
+      </div>
+      <section class="calendar-container">
+
+        <!-- Left column: nav + legend + grid -->
+        <div class="calendar-left">
+          <div class="calendar-nav">
+            <button class="nav-btn" id="prevMonth">&#8249;</button>
+            <h2 id="monthYear"></h2>
+            <button class="nav-btn" id="nextMonth">&#8250;</button>
+          </div>
+
+          <div class="legend" id="legend"></div>
+
+          <div class="calendar">
+            <div class="day-name">Sun</div>
+            <div class="day-name">Mon</div>
+            <div class="day-name">Tue</div>
+            <div class="day-name">Wed</div>
+            <div class="day-name">Thu</div>
+            <div class="day-name">Fri</div>
+            <div class="day-name">Sat</div>
+          </div>
+        </div>
+
+        <!-- Right column: event details -->
+        <div class="calendar-right">
+          <div id="event-details" class="event-details">
+            <h3>Event Details</h3>
+            <p id="event-info">Click a highlighted day to see events.</p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- EVENTS SCRIPT -->
+    <script>
+      const calendar    = document.querySelector(".calendar");
+      const monthYearEl = document.getElementById("monthYear");
+      const eventInfo   = document.getElementById("event-info");
+      const legend      = document.getElementById("legend");
+
+      const today = new Date();
+      let currentYear  = today.getFullYear();
+      let currentMonth = today.getMonth();
+
+      const events = {
+        "2026-6-1": [
+          { title: "Rosary in Rogal Chapel", time: "9:30 AM" },
+          { title: "Rosary in Rogal Chapel", time: "11:00 AM" },
+          { title: "Men's Group in Rogal Chapel", time: "12:00 PM - 1:00 PM" },
+          { title: "Men's Group in Rogal Chapel", time: "2:30 PM - 3:30 PM" }
+        ],
+        "2026-6-2": [
+          { title: "Stations of the Cross in Rogal Chapel", time: "12:00 PM" },
+          { title: "Men's Group in Rogal Chapel", time: "1:00 PM - 2:00 PM" }
+        ],
+        "2026-6-4": [
+          { title: "Easter Vigil at Saint Margaret Mary Church", time: "8:30 PM" }
+        ],
+        "2026-6-6": [
+          { title: "Labyrinth Prayer in Rogal Chapel", time: "12:00 AM - 4:00 PM" },
+          { title: "Bible Study in Rogal Chapel", time: "6:00 PM" }
+        ],
+        "2026-6-7": [
+          { title: "Catholic Newman Club Meeting in Rogal Chapel", time: "5:00 PM" }
+        ],
+        "2026-6-8": [
+          { title: "Rosary in Rogal Chapel", time: "9:30 AM" },
+          { title: "Rosary in Rogal Chapel", time: "11:00 AM" },
+          { title: "Men's Group in Rogal Chapel", time: "12:00 PM - 1:00 PM" },
+          { title: "Men's Group in Rogal Chapel", time: "2:30 PM - 3:30 PM" }
+        ],
+        "2026-6-9": [
+          { title: "Men's Group in Rogal Chapel", time: "1:00 PM - 2:00 PM" }
+        ],
+        "2026-6-10": [{ title: "Women's Group in Rogal Chapel", time: "3:00 PM - 4:00 PM" }],
+        "2026-6-11": [{ title: "Festival of Praise at Franciscan University Steubenville", time: "5:00 PM - 10:00 PM" }],
+        "2026-6-12": [
+          { title: "Confession in Rogal Chapel", time: "7:30 PM" },
+          { title: "Mass in Rogal Chapel", time: "8:00 PM" }
+        ],
+        "2026-6-13": [
+          { title: "Labyrinth Prayer in Rogal Chapel", time: "12:00 AM - 4:00 PM" },
+          { title: "Bible Study in Rogal Chapel", time: "6:00 PM" }
+        ],
+        "2026-6-14": [
+          { title: "Catholic Newman Club Meeting in Rogal Chapel", time: "5:00 PM" }
+        ],
+        "2026-6-15": [
+          { title: "Rosary in Rogal Chapel", time: "9:30 AM" },
+          { title: "Rosary in Rogal Chapel", time: "11:00 AM" },
+          { title: "Men's Group in Rogal Chapel", time: "12:00 PM - 1:00 PM" },
+          { title: "Men's Group in Rogal Chapel", time: "2:30 PM - 3:30 PM" }
+        ],
+        "2026-6-16": [
+          { title: "Men's Group in Rogal Chapel", time: "1:00 PM - 2:00 PM" }
+        ],
+        "2026-6-17": [{ title: "Women's Group in Rogal Chapel", time: "3:00 PM - 4:00 PM" }],
+        "2026-6-19": [
+          { title: "Confession in Rogal Chapel", time: "7:30 PM" },
+          { title: "Mass in Rogal Chapel", time: "8:00 PM" }
+        ],
+        "2026-6-20": [
+          { title: "Labyrinth Prayer in Rogal Chapel", time: "12:00 AM - 4:00 PM" },
+          { title: "Bible Study in Rogal Chapel", time: "6:00 PM" }
+        ],
+        "2026-6-21": [
+          { title: "Catholic Newman Club Meeting in Rogal Chapel", time: "5:00 PM" }
+        ],
+        "2026-6-22": [
+          { title: "Rosary in Rogal Chapel", time: "9:30 AM" },
+          { title: "Rosary in Rogal Chapel", time: "11:00 AM" },
+          { title: "Men's Group in Rogal Chapel", time: "12:00 PM - 1:00 PM" },
+          { title: "Men's Group in Rogal Chapel", time: "2:30 PM - 3:30 PM" }
+        ],
+        "2026-6-23": [
+          { title: "Men's Group in Rogal Chapel", time: "1:00 PM - 2:00 PM" }
+        ],
+        "2026-6-24": [{ title: "Women's Group in Rogal Chapel", time: "3:00 PM - 4:00 PM" }],
+        "2026-6-26": [
+          { title: "Confession in Rogal Chapel", time: "7:30 PM" },
+          { title: "Mass in Rogal Chapel", time: "8:00 PM" }
+        ],
+        "2026-6-27": [
+          { title: "Labyrinth Prayer in Rogal Chapel", time: "12:00 AM - 4:00 PM" },
+          { title: "Bible Study in Rogal Chapel", time: "6:00 PM" }
+        ],
+        "2026-6-28": [
+          { title: "Catholic Newman Club Meeting in Rogal Chapel (Bonfire)", time: "5:00 PM" }
+        ],
+        "2026-6-29": [
+          { title: "Rosary in Rogal Chapel", time: "9:30 AM" },
+          { title: "Rosary in Rogal Chapel", time: "11:00 AM" },
+          { title: "Men's Group in Rogal Chapel", time: "12:00 PM - 1:00 PM" },
+          { title: "Men's Group in Rogal Chapel", time: "2:30 PM - 3:30 PM" }
+        ],
+        "2026-6-30": [
+          { title: "Men's Group in Rogal Chapel", time: "1:00 PM - 2:00 PM" }
+        ]
+      };
+
+      const categoryMeta = {
+        mass:       { label: "Mass",          color: "#f5c518" },
+        confession: { label: "Confession",    color: "#b57bee" },
+        rosary:     { label: "Rosary",        color: "#7eb5ee" },
+        mens:       { label: "Men's Group",   color: "#5ba4e5" },
+        womens:     { label: "Women's Group", color: "#ee7eb5" },
+        bible:      { label: "Bible Study",   color: "#5ec47a" },
+        newman:     { label: "Newman Club",   color: "#f0914a" },
+        stations:   { label: "Stations",      color: "#e05555" },
+        prayer:     { label: "Prayer",        color: "#4ac4b5" },
+        special:    { label: "Special",       color: "#d4af37" },
+        other:      { label: "Other",         color: "#aaaaaa" }
+      };
+
+      function getCategory(title) {
+        const t = title.toLowerCase();
+        if (t.includes("mass"))            return "mass";
+        if (t.includes("confession"))      return "confession";
+        if (t.includes("rosary"))          return "rosary";
+        if (t.includes("men's group"))     return "mens";
+        if (t.includes("women's group"))   return "womens";
+        if (t.includes("bible study"))     return "bible";
+        if (t.includes("newman club"))     return "newman";
+        if (t.includes("stations"))        return "stations";
+        if (t.includes("labyrinth") || t.includes("prayer")) return "prayer";
+        if (t.includes("vigil") || t.includes("festival") || t.includes("easter")) return "special";
+        return "other";
+      }
+
+      const activeFilters = new Set();
+
+      function buildLegend() {
+        const used = new Set();
+        Object.values(events).forEach(list => list.forEach(e => used.add(getCategory(e.title))));
+        legend.innerHTML = "";
+        used.forEach(cat => {
+          const { label, color } = categoryMeta[cat];
+          const btn = document.createElement("button");
+          btn.className = "legend-btn";
+          btn.dataset.cat = cat;
+          btn.innerHTML = `<span class="legend-dot" style="background:${color}"></span>${label}`;
+          btn.addEventListener("click", () => {
+            if (activeFilters.has(cat)) {
+              activeFilters.delete(cat);
+              btn.classList.remove("active");
+            } else {
+              activeFilters.add(cat);
+              btn.classList.add("active");
+            }
+            renderCalendar();
+          });
+          legend.appendChild(btn);
+        });
+      }
+
+      function showDayEvents(key, dayEvents) {
+        const toShow = activeFilters.size > 0
+          ? dayEvents.filter(e => activeFilters.has(getCategory(e.title)))
+          : dayEvents;
+
+        if (toShow.length === 0) {
+          eventInfo.innerHTML = "<em>No events match the active filter for this day.</em>";
+          return;
+        }
+
+        eventInfo.innerHTML = toShow.map(e => {
+          const cat = getCategory(e.title);
+          const color = categoryMeta[cat].color;
+          return `
+            <div class="event-card" style="border-left-color:${color}">
+              <span class="event-cat-dot" style="background:${color}"></span>
+              <div class="event-card-body">
+                <strong class="event-title">${e.title}</strong>
+                <span class="event-time">&#128336; ${e.time}</span>
+              </div>
+            </div>`;
+        }).join("");
+      }
+
+      function renderCalendar() {
+        calendar.querySelectorAll(".day, .day-empty").forEach(d => d.remove());
+
+        const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+        const lastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+        monthYearEl.textContent = new Date(currentYear, currentMonth, 1)
+          .toLocaleString("default", { month: "long", year: "numeric" });
+
+        for (let i = 0; i < firstDay; i++) {
+          const empty = document.createElement("div");
+          empty.classList.add("day-empty");
+          calendar.appendChild(empty);
+        }
+
+        for (let day = 1; day <= lastDate; day++) {
+          const key = `${currentYear}-${currentMonth + 1}-${day}`;
+          const dayEvents = events[key] || null;
+
+          const filtered = dayEvents
+            ? (activeFilters.size > 0
+                ? dayEvents.filter(e => activeFilters.has(getCategory(e.title)))
+                : dayEvents)
+            : null;
+
+          const dayDiv = document.createElement("div");
+          dayDiv.classList.add("day");
+
+          const numSpan = document.createElement("span");
+          numSpan.className = "day-num";
+          numSpan.textContent = day;
+          dayDiv.appendChild(numSpan);
+
+          const isToday = (
+            day === today.getDate() &&
+            currentMonth === today.getMonth() &&
+            currentYear === today.getFullYear()
+          );
+
+          if (isToday) dayDiv.classList.add("today");
+
+          if (filtered && filtered.length > 0) {
+            dayDiv.classList.add("event-day");
+            const dotsDiv = document.createElement("div");
+            dotsDiv.className = "event-dots";
+            const cats = [...new Set(filtered.map(e => getCategory(e.title)))].slice(0, 3);
+            cats.forEach(cat => {
+              const dot = document.createElement("span");
+              dot.className = "event-dot";
+              dot.style.background = categoryMeta[cat].color;
+              dotsDiv.appendChild(dot);
+            });
+            dayDiv.appendChild(dotsDiv);
+          }
+
+          dayDiv.addEventListener("click", () => {
+            document.querySelectorAll(".day").forEach(d => d.classList.remove("selected"));
+            dayDiv.classList.add("selected");
+            if (!dayEvents) {
+              eventInfo.innerHTML = "<em>No events scheduled for this day.</em>";
+              return;
+            }
+            showDayEvents(key, dayEvents);
+          });
+
+          calendar.appendChild(dayDiv);
+        }
+
+        // Auto-select today if we're on the current month
+        if (currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
+          const todayKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+          const todayCell = document.querySelector(".day.today");
+          if (todayCell) {
+            todayCell.classList.add("selected");
+            const dayEvents = events[todayKey];
+            if (dayEvents) {
+              showDayEvents(todayKey, dayEvents);
+            } else {
+              eventInfo.innerHTML = "<em>No events scheduled for today.</em>";
+            }
+          }
+        }
+      }
+
+      document.getElementById("prevMonth").addEventListener("click", () => {
+        currentMonth--;
+        if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+        renderCalendar();
+      });
+
+      document.getElementById("nextMonth").addEventListener("click", () => {
+        currentMonth++;
+        if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+        renderCalendar();
+      });
+
+      buildLegend();
+      renderCalendar();
+    </script>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="follow-us">
+        <span>Follow Us</span>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/people/RMU-Colonial-Catholic-Ministry/100064644761324/?ref=embed_page#"
+           target="_blank" rel="noopener noreferrer" class="facebook-button">
+          <img class="facebook-icon" src="icons/facebook-brands-solid-full.svg" alt="Facebook">
+        </a>
+        <a href="https://x.com/rmuccm"
+           target="_blank" rel="noopener noreferrer" class="x-button">
+          <img class="x-icon" src="icons/x-twitter-brands-solid-full.svg" alt="X/Twitter">
+        </a>
+        <a href="https://www.instagram.com/colonialcatholic/?hl=en"
+           target="_blank" rel="noopener noreferrer" class="instagram-button">
+          <img class="instagram-icon" src="icons/instagram-brands-solid-full.svg" alt="Instagram">
+        </a>
+      </div>
+            <a href="https://revolution.rmu.edu/organization/catholic-newman-club" target="_blank" rel="noopener noreferrer" class="revolution-link">RMU Revolution &#8212; Catholic Newman Club</a>
+    </footer>
+
+    <script>
+      (function () {
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 40) {
+            header.style.background = 'rgba(8, 6, 4, 0.92)';
+            header.style.backdropFilter = 'blur(6px)';
+          } else {
+            header.style.background = '';
+            header.style.backdropFilter = '';
+          }
+        }, { passive: true });
+      })();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RMU Catholic Newman Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/contactpage.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="icon" type="image/png" href="icons/cnc-logo.png">
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <button class="hamburger-menu-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="off-screen-menu">
+          <ul>
+            <li class="menu-title pages-title">Pages</li>
+            <li class="page-link">
+              <img class="home-icon" src="icons/home.svg">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="page-link">
+              <img class="events-icon" src="icons/events.svg">
+              <a href="eventspage.html">Events</a>
+            </li>
+            <li class="page-link">
+              <img class="contact-icon" src="icons/contact.svg">
+              <a href="contactpage.html">Contact</a>
+            </li>
+            <li class="page-link">
+              <img class="sign-up-icon" src="icons/sign-up.svg">
+              <a href="sign-up-page.html">Sign Up</a>
+            </li>
+
+            <li class="menu-title">Resources</li>
+            <li>
+              <img class="eucharist-logo" src="icons/eucharist.jpg">
+              <a href="https://www.miracolieucaristici.org/en/liste/list.html" target="_blank">Eucharistic Miracles</a>
+            </li>
+            <li>
+              <img class="diocese-logo" src="icons/dop.png">
+              <a href="https://diopitt.org/" target="_blank">Diocese of Pittsburgh</a>
+            </li>
+            <li>
+              <img class="vatican-news-logo" src="icons/vaticannewslogo.jpg">
+              <a href="https://www.vaticannews.va/en.html" target="_blank">Vatican News</a>
+            </li>
+            <li>
+              <img class="catholic-answers-logo" src="icons/catholicanswerslogo.webp">
+              <a href="https://www.catholic.com/" target="_blank">Catholic Answers</a>
+            </li>
+            <li>
+              <img class="bible-logo" src="icons/biblegate.png">
+              <a href="https://www.biblegateway.com/" target="_blank">Online Bible</a>
+            </li>
+            <li>
+              <img class="catechism-logo" src="icons/Catechism of the Catholic Church, Revised.jpg">
+              <a href="https://usccb.cld.bz/Catechism-of-the-Catholic-Church2" target="_blank">Online Catechism</a>
+            </li>
+            <li>
+              <img class="ascension-logo" src="icons/ascension-presents-logo.jpeg">
+              <a href="https://www.youtube.com/watch?v=RS8NrJ0Y5O8" target="_blank">How To Understand Mass</a>
+            </li>
+            <li>
+              <img class="rosary-logo" src="icons/rosaryimage.jpg">
+              <a href="https://www.usccb.org/how-to-pray-the-rosary" target="_blank">How to Pray the Rosary</a>
+            </li>
+            <li>
+              <img class="how-logo" src="icons/howlogo.jpg">
+              <a href="https://www.youtube.com/watch?v=P1HC0Vz67yo" target="_blank">How to Become Catholic</a>
+            </li>
+          </ul>
+        </nav>
+
+        <script>
+          const hamburger = document.querySelector('.hamburger-menu-button');
+          const menu = document.querySelector('.off-screen-menu');
+          hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+          });
+        </script>
+
+        <img class="colonial-catholics-image" src="icons/cnc-logo.png">
+
+        <div class="search-section">
+          <input class="search-bar" type="text" placeholder="Search">
+          <button class="search-button">
+            <img class="search-icon" src="icons/search.svg">
+          </button>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="nav-buttons">
+          <button class="home-button">
+            <img class="home-icon" src="icons/home.svg">
+            <div class="home"><a href="index.html">Home</a></div>
+          </button>
+          <button class="events-button">
+            <img class="events-icon" src="icons/events.svg">
+            <div class="events"><a href="eventspage.html">Events</a></div>
+          </button>
+          <button class="contact-button">
+            <img class="contact-icon" src="icons/contact.svg">
+            <div class="contact"><a href="contactpage.html">Contact</a></div>
+          </button>
+          <button class="sign-up-button">
+            <img class="sign-up-icon" src="icons/sign-up.svg">
+            <div class="sign-up"><a href="sign-up-page.html">Sign Up</a></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.querySelector(".search-bar");
+        const searchButton = document.querySelector(".search-button");
+        const menu = document.querySelector(".off-screen-menu");
+
+        if (!searchInput || !searchButton) return;
+
+        const dropdown = document.createElement("div");
+        dropdown.className = "search-dropdown";
+        dropdown.style.display = "none";
+        document.querySelector('.search-section').appendChild(dropdown);
+
+        const pages = {
+          "mass": { label: "Mass", url: "eventspage.html", newTab: false },
+          "rosary": { label: "Rosary", url: "eventspage.html", newTab: false },
+          "ethan zeledon": { label: "Ethan Zeledon", url: "contactpage.html", newTab: false },
+          "men's group": { label: "Men's Group", url: "eventspage.html", newTab: false },
+          "women's group": { label: "Women's Group", url: "eventspage.html", newTab: false },
+          "bible study": { label: "Bible Study", url: "eventspage.html", newTab: false },
+          "confession": { label: "Confession", url: "eventspage.html", newTab: false },
+          "about": { label: "About", url: "index.html#interior-section", newTab: false },
+          "history": { label: "History", url: "index.html#newman-section", newTab: false },
+          "resources": { label: "Resources", action: "menu" },
+          "facebook": { label: "Facebook Page", url: "https://www.facebook.com/people/RMU-Colonial-Catholic-Ministry/100064644761324/?ref=embed_page#", newTab: true },
+          "x": { label: "X Page", url: "https://x.com/rmuccm", newTab: true },
+          "instagram": { label: "Instagram Page", url: "https://www.instagram.com/colonialcatholic/?hl=en", newTab: true }
+        };
+
+        function navigate(result) {
+          dropdown.style.display = "none";
+          searchInput.value = "";
+          if (result.action === "menu") {
+  if (menu) {
+    menu.classList.add("active");
+    hamburger.classList.add("active");
+  }
+  return;
+}
+          if (result.newTab) {
+            window.open(result.url, "_blank", "noopener,noreferrer");
+          } else {
+            window.location.href = result.url;
+          }
+        }
+
+        function handleSearch() {
+          const query = searchInput.value.trim().toLowerCase();
+          if (!query) return;
+          if (pages[query]) { navigate(pages[query]); return; }
+          for (const key in pages) {
+            if (key.includes(query) || query.includes(key)) {
+              navigate(pages[key]);
+              return;
+            }
+          }
+          alert("No results found.");
+        }
+
+        function renderDropdown(results) {
+          dropdown.innerHTML = "";
+          results.forEach(result => {
+            const item = document.createElement("div");
+            item.textContent = result.label;
+            item.addEventListener("click", () => navigate(result));
+            dropdown.appendChild(item);
+          });
+          dropdown.style.display = results.length ? "block" : "none";
+        }
+
+        function updateDropdown() {
+          const query = searchInput.value.trim().toLowerCase();
+          let results = [];
+          if (!query) {
+            results = Object.values(pages);
+            renderDropdown(results);
+            return;
+          }
+          if (pages[query]) { results.push(pages[query]); }
+          for (const key in pages) {
+            if (key.includes(query) && (!pages[query] || key !== query)) {
+              results.push(pages[key]);
+            }
+          }
+          renderDropdown(results);
+        }
+
+        searchInput.addEventListener("focus", updateDropdown);
+        searchInput.addEventListener("input", updateDropdown);
+        searchButton.addEventListener("click", handleSearch);
+        searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") handleSearch(); });
+        document.addEventListener("click", (e) => {
+          if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-section">
+      <div class="contact-text">
+        <div class="contact-heading">
+          <span class="contact-eyebrow">RMU Catholic Newman Club</span>
+          <h1 class="contact-title">Get in Touch</h1>
+          <div class="contact-rule"></div>
+        </div>
+        <div class="minister">
+          <span class="minister-label">Campus Minister:</span>
+          <span class="minister-text">Ethan Zeledon</span>
+        </div>
+
+        <div class="email">
+          <span class="email-label">Email:</span>
+          <span class="email-text">ezeledon@diopitt.org</span>
+        </div>
+
+        <div class="phone-number">
+          <span class="phone-number-label">Phone Number:</span>
+          <span class="phone-number-text">760-445-4937</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="contact-spacer"></div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="follow-us">
+        <span>Follow Us</span>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/people/RMU-Colonial-Catholic-Ministry/100064644761324/?ref=embed_page#"
+           target="_blank" rel="noopener noreferrer" class="facebook-button">
+          <img class="facebook-icon" src="icons/facebook-brands-solid-full.svg" alt="Facebook">
+        </a>
+        <a href="https://x.com/rmuccm"
+           target="_blank" rel="noopener noreferrer" class="x-button">
+          <img class="x-icon" src="icons/x-twitter-brands-solid-full.svg" alt="X/Twitter">
+        </a>
+        <a href="https://www.instagram.com/colonialcatholic/?hl=en"
+           target="_blank" rel="noopener noreferrer" class="instagram-button">
+          <img class="instagram-icon" src="icons/instagram-brands-solid-full.svg" alt="Instagram">
+        </a>
+      </div>
+            <a href="https://revolution.rmu.edu/organization/catholic-newman-club" target="_blank" rel="noopener noreferrer" class="revolution-link">RMU Revolution &#8212; Catholic Newman Club</a>
+    </footer>
+
+    <script>
+      (function () {
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 40) {
+            header.style.background = 'rgba(8, 6, 4, 0.92)';
+            header.style.backdropFilter = 'blur(6px)';
+          } else {
+            header.style.background = '';
+            header.style.backdropFilter = '';
+          }
+        }, { passive: true });
+      })();
+    </script>
+
+  </body>
+</html>
