@@ -1,0 +1,95 @@
+footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 40px 0 36px;
+  margin-top: auto;
+  width: 100%;
+  background: black;
+}
+
+.follow-us {
+  font-family: Roboto, Arial;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin-bottom: -4px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 24px;
+}
+
+.facebook-button,
+.x-button,
+.instagram-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.facebook-button:hover,
+.x-button:hover,
+.instagram-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.revolution-link {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.revolution-link:hover {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+}
+
+.facebook-icon,
+.x-icon,
+.instagram-icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(0) opacity(0.85);
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 32px 0 28px;
+    gap: 12px;
+  }
+  .facebook-button,
+  .x-button,
+  .instagram-button {
+    width: 48px;
+    height: 48px;
+  }
+  .social-icons {
+    gap: 20px;
+  }
+}
+
