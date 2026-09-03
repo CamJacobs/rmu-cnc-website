@@ -316,18 +316,30 @@
         "2026-9-3": [
           { title: "Men's Group in Rogal Chapel", time: "12:30 PM - 2:00 PM" }
         ],
+        "2026-9-4": [
+          { title: "Evening Mass, Social, and Food at Holy Trinity Church", time: "6:30 PM - 10:00 PM" }
+        ],
+         "2026-9-5": [
+          { title: "Festival of Praise at Franciscan University of Steubenville", time: "6:00 PM - 10:00 PM" }
+        ],
         "2026-9-6": [
           { title: "Confession in Rogal Chapel", time: "7:30 PM" },
           { title: "Mass in Rogal Chapel", time: "8:00 PM" }
         ],
         "2026-9-8": [
-           { title: "Catholic Newman Club Meeting in Rogal Chapel", time: "5:00 PM" }
+           { title: "Catholic Newman Club Meeting in Rogal Chapel (Father Mingwei Li Presentation on The Church in China)", time: "5:00 PM" }
         ],
         "2026-9-9": [
           { title: "Rosary in Rogal Chapel", time: "10:00 AM" }
         ],
         "2026-9-10": [
           { title: "Men's Group in Rogal Chapel", time: "12:30 PM - 2:00 PM" }
+        ],
+        "2026-9-11": [
+          { title: "Evening Mass, Social, and Food at Holy Trinity Church", time: "6:30 PM - 10:00 PM" }
+        ],
+        "2026-9-12": [
+          { title: "Mini Golf at Neville Island", time: "6:00 PM" }
         ],
         "2026-9-13": [
           { title: "Confession in Rogal Chapel", time: "7:30 PM" },
@@ -342,6 +354,12 @@
         "2026-9-17": [
           { title: "Men's Group in Rogal Chapel", time: "12:30 PM - 2:00 PM" }
         ],
+        "2026-9-18": [
+          { title: "Evening Mass, Social, and Food at Holy Trinity Church", time: "6:30 PM - 10:00 PM" }
+        ],
+        "2026-9-19": [
+          { title: "Game Night in Rogal Chapel", time: "8:00 PM" }
+        ],
         "2026-9-20": [
           { title: "Confession in Rogal Chapel", time: "7:30 PM" },
           { title: "Mass in Rogal Chapel", time: "8:00 PM" }
@@ -354,6 +372,12 @@
         ],
         "2026-9-24": [
           { title: "Men's Group in Rogal Chapel", time: "12:30 PM - 2:00 PM" }
+        ],
+        "2026-9-25": [
+          { title: "Evening Mass, Social, and Food at Holy Trinity Church", time: "6:30 PM - 10:00 PM" }
+        ],
+         "2026-9-26": [
+          { title: "Festival of Praise at Franciscan University of Steubenville", time: "6:00 PM - 10:00 PM" }
         ],
         "2026-9-27": [
           { title: "Confession in Rogal Chapel", time: "7:30 PM" },
@@ -368,6 +392,9 @@
         "2026-10-1": [
           { title: "Men's Group in Rogal Chapel", time: "12:30 PM - 2:00 PM" }
         ],
+        "2026-10-2": [
+          { title: "Evening Mass, Social, and Food at Holy Trinity Church", time: "6:30 PM - 10:00 PM" }
+        ],
         
       };
 
@@ -375,13 +402,12 @@
         mass:       { label: "Mass",          color: "#f5c518" },
         confession: { label: "Confession",    color: "#b57bee" },
         rosary:     { label: "Rosary",        color: "#7eb5ee" },
-        mens:       { label: "Men's Group",   color: "#5ba4e5" },
+        mens:       { label: "Men's Group",   color: "#00FF00" },
         womens:     { label: "Women's Group", color: "#ee7eb5" },
         bible:      { label: "Bible Study",   color: "#5ec47a" },
         newman:     { label: "Newman Club",   color: "#f0914a" },
-        stations:   { label: "Stations",      color: "#e05555" },
         prayer:     { label: "Prayer",        color: "#4ac4b5" },
-        special:    { label: "Special",       color: "#d4af37" },
+        special:    { label: "Special",       color: "#FF0000" },
         other:      { label: "Other",         color: "#aaaaaa" }
       };
 
@@ -394,9 +420,8 @@
         if (t.includes("women's group"))   return "womens";
         if (t.includes("bible study"))     return "bible";
         if (t.includes("newman club"))     return "newman";
-        if (t.includes("stations"))        return "stations";
         if (t.includes("labyrinth") || t.includes("prayer")) return "prayer";
-        if (t.includes("vigil") || t.includes("festival") || t.includes("easter")) return "special";
+        if (t.includes("vigil") || t.includes("festival") || t.includes("easter") || t.includes("mini golf") || t.includes("game night")|| t.includes("bonfire")) return "special";
         return "other";
       }
 
