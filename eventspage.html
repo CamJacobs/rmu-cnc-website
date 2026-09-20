@@ -375,14 +375,18 @@
           { title: "Men's Group in Rogal Chapel", time: "12:30 PM - 2:00 PM" }
         ],
         "2026-9-25": [
+          { title: "Women's Group in Rogal Chapel", time: "1:00 PM" },
           { title: "Evening Mass, Social, and Food at Holy Trinity Church", time: "6:30 PM - 10:00 PM" }
         ],
          "2026-9-26": [
-          { title: "Festival of Praise at Franciscan University of Steubenville", time: "6:00 PM - 10:00 PM" }
+          { title: "Festival of Praise at Franciscan University of Steubenville", time: "8:00 PM" }
         ],
         "2026-9-27": [
           { title: "Confession in Rogal Chapel", time: "7:30 PM" },
           { title: "Mass in Rogal Chapel", time: "8:00 PM" }
+        ],
+        "2026-9-28": [
+          { title: "Bible Study in Rogal Chapel", time: "6:00 PM" }
         ],
         "2026-9-29": [
            { title: "Catholic Newman Club Meeting in Rogal Chapel", time: "5:00 PM" }
@@ -394,6 +398,7 @@
           { title: "Men's Group in Rogal Chapel", time: "12:30 PM - 2:00 PM" }
         ],
         "2026-10-2": [
+          { title: "Women's Group in Rogal Chapel", time: "1:00 PM" },
           { title: "Evening Mass, Social, and Food at Holy Trinity Church", time: "6:30 PM - 10:00 PM" }
         ],
         
@@ -404,8 +409,8 @@
         confession: { label: "Confession",    color: "#b57bee" },
         rosary:     { label: "Rosary",        color: "#7eb5ee" },
         mens:       { label: "Men's Group",   color: "#00FF00" },
-        womens:     { label: "Women's Group", color: "#ee7eb5" },
-        bible:      { label: "Bible Study",   color: "#5ec47a" },
+        womens:     { label: "Women's Group", color: "#e88ba0" },
+        bible:      { label: "Bible Study",   color: "#8a6142" },
         newman:     { label: "Newman Club",   color: "#f0914a" },
         prayer:     { label: "Prayer",        color: "#4ac4b5" },
         special:    { label: "Special",       color: "#FF0000" },
@@ -417,8 +422,8 @@
         if (t.includes("mass"))            return "mass";
         if (t.includes("confession"))      return "confession";
         if (t.includes("rosary"))          return "rosary";
-        if (t.includes("men's group"))     return "mens";
         if (t.includes("women's group"))   return "womens";
+        if (t.includes("men's group"))     return "mens";
         if (t.includes("bible study"))     return "bible";
         if (t.includes("newman club"))     return "newman";
         if (t.includes("labyrinth") || t.includes("prayer")) return "prayer";
