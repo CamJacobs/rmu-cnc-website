@@ -421,6 +421,9 @@
           { title: "Women's Group in Rogal Chapel", time: "1:00 PM" },
           { title: "Evening Mass, Social, and Food at Holy Trinity Church", time: "6:30 PM - 10:00 PM" }
         ],
+        "2026-10-10": [
+          { title: "Fright Night at Kennywood Amusement Park", time: "6:00 PM - 11:00 PM" }
+        ],
         "2026-10-11": [
           { title: "Confession in Rogal Chapel", time: "7:30 PM" },
           { title: "Mass in Rogal Chapel", time: "8:00 PM" }
@@ -507,7 +510,7 @@
         if (t.includes("men's group"))     return "mens";
         if (t.includes("bible study"))     return "bible";
         if (t.includes("newman club"))     return "newman";
-        if (t.includes("vigil") || t.includes("festival") || t.includes("easter") || t.includes("mini golf") || t.includes("game night") || t.includes("bonfire") || t.includes("cornhole") || t.includes("fest")) return "special";
+        if (t.includes("vigil") || t.includes("festival") || t.includes("easter") || t.includes("mini golf") || t.includes("game night") || t.includes("bonfire") || t.includes("cornhole") || t.includes("fest") || t.includes("kennywood")) return "special";
         return "other";
       }
 
@@ -660,6 +663,79 @@
       buildLegend();
       renderCalendar();
     </script>
+
+    <!-- EVENT CATEGORIES GUIDE -->
+    <section class="categories-guide">
+      <div class="categories-guide-inner">
+        <h2 class="categories-title">Event Categories</h2>
+        <div class="categories-rule"></div>
+        <div class="categories-grid">
+          <div class="category-item">
+            <span class="category-dot" style="background:#f5c518"></span>
+            <div class="category-info">
+              <span class="category-name">Mass</span>
+              <span class="category-desc">Weekly Sunday Mass celebrated in Rogal Chapel.</span>
+            </div>
+          </div>
+          <div class="category-item">
+            <span class="category-dot" style="background:#b57bee"></span>
+            <div class="category-info">
+              <span class="category-name">Confession</span>
+              <span class="category-desc">Weekly opportunity to receive the Sacrament of Reconciliation in Rogal Chapel before Mass.</span>
+            </div>
+          </div>
+          <div class="category-item">
+            <span class="category-dot" style="background:#7eb5ee"></span>
+            <div class="category-info">
+              <span class="category-name">Prayer Group</span>
+              <span class="category-desc">Sunday morning prayer group in partnership with CCO (Coalition Christian Outreach) in Rogal Chapel.</span>
+            </div>
+          </div>
+          <div class="category-item">
+            <span class="category-dot" style="background:#FFFFFF"></span>
+            <div class="category-info">
+              <span class="category-name">Rosary</span>
+              <span class="category-desc">Weekly Rosary prayed together in Rogal Chapel to start off the day.</span>
+            </div>
+          </div>
+          <div class="category-item">
+            <span class="category-dot" style="background:#00FF00"></span>
+            <div class="category-info">
+              <span class="category-name">Men's Group</span>
+              <span class="category-desc">Weekly faith formation and fellowship gathering for men in Rogal Chapel.</span>
+            </div>
+          </div>
+          <div class="category-item">
+            <span class="category-dot" style="background:#e88ba0"></span>
+            <div class="category-info">
+              <span class="category-name">Women's Group</span>
+              <span class="category-desc">Weekly faith formation and fellowship gathering for women in Rogal Chapel.</span>
+            </div>
+          </div>
+          <div class="category-item">
+            <span class="category-dot" style="background:#8a6142"></span>
+            <div class="category-info">
+              <span class="category-name">Bible Study</span>
+              <span class="category-desc">Weekly Scripture study and discussion led by Sister Bernadette in Rogal Chapel.</span>
+            </div>
+          </div>
+          <div class="category-item">
+            <span class="category-dot" style="background:#f0914a"></span>
+            <div class="category-info">
+              <span class="category-name">Newman Club Meeting</span>
+              <span class="category-desc">Weekly all-club meetings in Rogal Chapel featuring speakers, discussions, activites, and club updates.</span>
+            </div>
+          </div>
+          <div class="category-item">
+            <span class="category-dot" style="background:#FF0000"></span>
+            <div class="category-info">
+              <span class="category-name">Special Events</span>
+              <span class="category-desc">Festivals, retreats, social outings, activities off campus, and other special one-time gatherings throughout the year.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer id="footer">
