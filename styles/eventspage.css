@@ -420,6 +420,87 @@ body::before
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.65);
 }
+/* =========================
+   Event Categories Guide
+========================= */
+.categories-guide {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.categories-guide-inner {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 48px;
+  width: min(820px, calc(100vw - 40px));
+}
+
+.categories-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  margin: 0 0 14px;
+  letter-spacing: 0.03em;
+}
+
+.categories-rule {
+  width: 48px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 auto 32px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+}
+
+.category-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.category-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.category-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-name {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.category-desc {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+}
+
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
@@ -434,6 +515,15 @@ body::before
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-left: 0;
     padding-top: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+  .categories-guide-inner {
+    padding: 28px 24px;
   }
 }
 
