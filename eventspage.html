@@ -383,7 +383,8 @@
         ],
         "2026-9-27": [
           { title: "Confession | Rogal Chapel", time: "7:30 PM" },
-          { title: "Mass | Rogal Chapel", time: "8:00 PM" }
+          { title: "Mass | Rogal Chapel", time: "8:00 PM" },
+          { title: "Halloween Cupcake Decorating | Rogal Chapel", time: "After Mass" }
         ],
         "2026-9-28": [
           { title: "Bible Study (Gospel of Matthew) | Rogal Chapel", time: "6:00 PM - 7:30 PM" }
@@ -392,7 +393,8 @@
           { title: "Catholic Newman Club Meeting | Rogal Chapel", time: "5:00 PM - 6:00 PM" }
         ],
         "2026-9-30": [
-          { title: "Prayer Group with CCO | Rogal Chapel", time: "9:00 AM" }
+          { title: "Prayer Group with CCO | Rogal Chapel", time: "9:00 AM" },
+          { title: "Bonfire | Nicholson Center 1 Firepit", time: "8:00 PM - 10:00 PM" }
         ],
         "2026-10-1": [
           { title: "Men's Group | Rogal Chapel", time: "12:30 PM - 2:00 PM" }
@@ -449,9 +451,7 @@
           { title: "Mass | Rogal Chapel", time: "8:00 PM" },
           { title: "Pumpkin Carving | Rogal Chapel", time: "After Mass" }
         ],
-        "2026-10-19": [
-          { title: "Bible Study (Gospel of Matthew) | Rogal Chapel", time: "6:00 PM - 7:30 PM" }
-        ],
+       
         "2026-10-20": [
           { title: "Catholic Newman Club Meeting | Rogal Chapel", time: "5:00 PM - 6:00 PM" }
         ],
@@ -463,9 +463,10 @@
         ],
         "2026-10-23": [
           { title: "Women's Group | Rogal Chapel", time: "1:00 PM" },
-          { title: "Mass, Dinner, and Activities | Holy Trinity Church (Archangel Gabriel Parish)", time: "6:30 PM - 10:00 PM" }
+          { title: "Movie Night (The Prince of Egypt) | Rogal Chapel", time: "8:00 PM - 11:00 PM" }
         ],
         "2026-10-25": [
+          { title: "Fall Retreat | PennWest University", time: "10:00 AM -3:00 PM" },
           { title: "Confession | Rogal Chapel", time: "7:30 PM" },
           { title: "Mass | Rogal Chapel", time: "8:00 PM" }
         ],
@@ -479,7 +480,8 @@
           { title: "Prayer Group with CCO | Rogal Chapel", time: "9:00 AM" }
         ],
         "2026-10-29": [
-          { title: "Men's Group | Rogal Chapel", time: "12:30 PM - 2:00 PM" }
+          { title: "Men's Group | Rogal Chapel", time: "12:30 PM - 2:00 PM" },
+          { title: "Top Golf | Bridgeville", time: "7:00 PM - 9:00 PM" }
         ],
         "2026-10-30": [
           { title: "Women's Group | Rogal Chapel", time: "1:00 PM" },
@@ -511,7 +513,7 @@
         if (t.includes("men's group"))     return "mens";
         if (t.includes("bible study"))     return "bible";
         if (t.includes("newman club"))     return "newman";
-        if (t.includes("vigil") || t.includes("festival") || t.includes("easter") || t.includes("mini golf") || t.includes("game night") || t.includes("bonfire") || t.includes("cornhole") || t.includes("fest") || t.includes("kennywood") || t.includes("pumpkin")) return "special";
+        if (t.includes("vigil") || t.includes("festival") || t.includes("easter") || t.includes("mini golf") || t.includes("game night") || t.includes("bonfire") || t.includes("cornhole") || t.includes("fest") || t.includes("halloween") || t.includes("kennywood") || t.includes("pumpkin") || t.includes("movie night") || t.includes("fall retreat") || t.includes("top golf")) return "special";
         return "other";
       }
 
