@@ -147,9 +147,9 @@
           "about": { label: "About", url: "index.html#interior-section", newTab: false },
           "history": { label: "History", url: "index.html#newman-section", newTab: false },
           "resources": { label: "Resources", action: "menu" },
-          "facebook": { label: "Facebook Page", url: "https://www.facebook.com/people/RMU-Colonial-Catholic-Ministry/100064644761324/?ref=embed_page#", newTab: true },
-          "x": { label: "X Page", url: "https://x.com/rmuccm", newTab: true },
-          "instagram": { label: "Instagram Page", url: "https://www.instagram.com/rmunewmanclub/", newTab: true }
+          "instagram": { label: "Instagram Page", url: "https://www.instagram.com/rmunewmanclub/", newTab: true },
+          "revolution": { label: "RMU Revolution Page", url: "https://revolution.rmu.edu/organization/catholic-newman-club", newTab: true, aliases: ["rmu", "rmu revolution"] },
+          "groupme": { label: "GroupMe Page", url: "https://groupme.com/join_group/117966194/GCquS9V0", newTab: true, aliases: ["group me", "group-me"] }
         };
 
         function navigate(result) {
@@ -169,12 +169,18 @@
           }
         }
 
+        function namesOf(key) {
+          return [key].concat(pages[key].aliases || []);
+        }
+
         function handleSearch() {
           const query = searchInput.value.trim().toLowerCase();
           if (!query) return;
-          if (pages[query]) { navigate(pages[query]); return; }
           for (const key in pages) {
-            if (key.includes(query) || query.includes(key)) {
+            if (namesOf(key).includes(query)) { navigate(pages[key]); return; }
+          }
+          for (const key in pages) {
+            if (namesOf(key).some(n => n.includes(query) || query.includes(n))) {
               navigate(pages[key]);
               return;
             }
@@ -201,9 +207,11 @@
             renderDropdown(results);
             return;
           }
-          if (pages[query]) { results.push(pages[query]); }
           for (const key in pages) {
-            if (key.includes(query) && (!pages[query] || key !== query)) {
+            if (namesOf(key).includes(query)) results.push(pages[key]);
+          }
+          for (const key in pages) {
+            if (!namesOf(key).includes(query) && namesOf(key).some(n => n.includes(query))) {
               results.push(pages[key]);
             }
           }
@@ -229,7 +237,7 @@
         <img class="hero-cross" src="icons/jerusalem-cross.svg" alt="Cross">
         <h1 class="hero-title">Welcome to the RMU Catholic Newman Club</h1>
         <div class="hero-rule"></div>
-        <p class="hero-address">419 Pennsylvania Ave, Moon Township, PA 15108</p>
+        <p class="hero-address">6001 University Boulevard, Moon Township, PA 15108</p>
         <div class="scroll-arrow">&#8595;</div>
       </div>
     </div>
@@ -262,25 +270,19 @@
       </div>
 
       <footer id="footer">
-        <div class="follow-us">
-          <span>Follow Us</span>
-        </div>
+        <div class="follow-us">Follow Us</div>
         <div class="social-icons">
-          <a href="https://www.facebook.com/people/RMU-Colonial-Catholic-Ministry/100064644761324/?ref=embed_page#"
-             target="_blank" rel="noopener noreferrer" class="facebook-button">
-            <img class="facebook-icon" src="icons/facebook-brands-solid-full.svg" alt="Facebook">
+          <a href="https://www.instagram.com/rmunewmanclub/" target="_blank" rel="noopener noreferrer" class="social-button" title="Instagram" aria-label="Instagram">
+            <img class="instagram-icon" src="icons/instagram-brands-solid-full.svg" alt="">
           </a>
-          <a href="https://x.com/rmuccm"
-             target="_blank" rel="noopener noreferrer" class="x-button">
-            <img class="x-icon" src="icons/x-twitter-brands-solid-full.svg" alt="X/Twitter">
+          <a href="https://revolution.rmu.edu/organization/catholic-newman-club" target="_blank" rel="noopener noreferrer" class="social-button" title="RMU Revolution &#8212; Catholic Newman Club" aria-label="RMU Revolution &#8212; Catholic Newman Club">
+            <img class="revolution-icon" src="icons/revolution-favicon.png" alt="">
           </a>
-          <a href="https://www.instagram.com/rmunewmanclub/"
-             target="_blank" rel="noopener noreferrer" class="instagram-button">
-            <img class="instagram-icon" src="icons/instagram-brands-solid-full.svg" alt="Instagram">
+          <a href="https://groupme.com/join_group/117966194/GCquS9V0" target="_blank" rel="noopener noreferrer" class="social-button" title="Join our GroupMe" aria-label="Join our GroupMe">
+            <img class="groupme-icon" src="icons/groupme-logo.png" alt="">
           </a>
         </div>
-              <a href="https://revolution.rmu.edu/organization/catholic-newman-club" target="_blank" rel="noopener noreferrer" class="revolution-link">RMU Revolution &#8212; Catholic Newman Club</a>
-    </footer>
+      </footer>
     </div>
 
     <script>
