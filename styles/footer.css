@@ -5,86 +5,77 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  padding: 40px 0 36px;
+  gap: 16px;
+  padding: 44px 20px 44px;
   margin-top: auto;
   width: 100%;
-  background: black;
+  box-sizing: border-box;
+  background: rgba(8, 6, 4, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .follow-us {
-  font-family: Roboto, Arial;
-  font-size: 10px;
+  font-family: 'Lato', Roboto, Arial, sans-serif;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   text-align: center;
-  color: white;
-  margin-bottom: -4px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .social-icons {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
 }
 
-.facebook-button,
-.x-button,
-.instagram-button {
+.social-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   background-color: white;
-  border: 2px solid white;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.2s ease,
-              border-color 0.2s ease,
-              transform 0.2s ease;
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
 }
 
-.facebook-button:hover,
-.x-button:hover,
-.instagram-button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-color: rgba(255, 255, 255, 0.8);
-  transform: translateY(-2px);
+.social-button:hover,
+.social-button:focus-visible {
+  background-color: rgba(255, 255, 255, 0.85);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.18);
 }
 
-.revolution-link {
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: white;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.revolution-link:hover {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: underline;
-}
-
-.facebook-icon,
-.x-icon,
 .instagram-icon {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   filter: invert(0) opacity(0.85);
+}
+
+.groupme-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.revolution-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 480px) {
   footer {
-    padding: 32px 0 28px;
-    gap: 12px;
+    padding: 36px 16px 36px;
+    gap: 14px;
   }
-  .facebook-button,
-  .x-button,
-  .instagram-button {
+  .social-button {
     width: 48px;
     height: 48px;
   }
@@ -92,4 +83,3 @@ footer {
     gap: 20px;
   }
 }
-
